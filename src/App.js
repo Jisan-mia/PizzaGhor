@@ -1,11 +1,21 @@
-function App() {
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import About from "./pages/About";
+import Home from "./pages/Home";
+
+const App = () => {
 	return (
-		<div>
-			<h1>This is react app</h1>
-			<p>This is jsx paragraph</p>
-			<h2>This is h2</h2>
-		</div>
+		<>
+			<Router>
+				<Link to="/">Home</Link>
+				<Link to="/about">About</Link>
+
+				<Switch>
+					<Route path="/" exact component={Home}></Route>
+					<Route path="/about" component={About}></Route>
+				</Switch>
+			</Router>
+		</>
 	);
-}
+};
 
 export default App;
