@@ -1,17 +1,20 @@
-import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
-import About from "./pages/About";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Navigation from "./components/Navigation";
+import Products from "./components/Products";
+import Cart from "./pages/Cart";
 import Home from "./pages/Home";
-
+import ProductDetail from "./pages/ProductDetail";
 const App = () => {
 	return (
 		<>
 			<Router>
-				<Link to="/">Home</Link>
-				<Link to="/about">About</Link>
+				<Navigation />
 
 				<Switch>
 					<Route path="/" exact component={Home}></Route>
-					<Route path="/about" component={About}></Route>
+					<Route path="/products" exact component={Products}></Route>
+					<Route path="/products/:_id" component={ProductDetail}></Route>
+					<Route path="/cart" component={Cart}></Route>
 				</Switch>
 			</Router>
 		</>
