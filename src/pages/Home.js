@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Products from "../components/Products";
 
 const Home = () => {
@@ -10,9 +11,11 @@ const Home = () => {
 							<em>Are you hangry?</em>
 						</h6>
 						<h1 className="text-3xl md:text-6xl font-bold">Don't wait!</h1>
-						<button className="mt-4 px-6 py-2 rounded-full bg-yellow-500 text-white font-bold hover:bg-yellow-600">
-							Order now
-						</button>
+						<Link to="/products">
+							<button className="mt-4 px-6 py-2 rounded-full bg-yellow-500 text-white font-bold hover:bg-yellow-600">
+								Order now
+							</button>
+						</Link>
 					</div>
 					<div className="w-1/2">
 						<img

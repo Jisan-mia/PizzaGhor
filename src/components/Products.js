@@ -1,3 +1,4 @@
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Product from "./Product";
 
@@ -7,13 +8,20 @@ const Products = () => {
 	// const { name } = useContext(CartContext);
 
 	useEffect(() => {
-		fetch("https://ecom-rest-apis.herokuapp.com/api/products")
-			.then((res) => res.json())
-			.then((products) => {
-				setProducts(products);
-				setIsLoading(false);
-			});
+		fetchProducts();
 	}, []);
+
+	const fetchProducts = async () => {
+		try {
+			const products = await axios.get(
+				"https://ecom-rest-apis.herokuapp.com/api/products"
+			);
+			setProducts(products.data);
+			setIsLoading(false);
+		} catch (error) {
+			console.log(error);
+		}
+	};
 
 	const loading = isLoading && "loading";
 
