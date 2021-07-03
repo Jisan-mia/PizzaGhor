@@ -7,6 +7,7 @@ const Product = ({ product }) => {
 	const { name, price, size, image, _id } = product;
 	const { cart, setCart } = useContext(CartContext);
 
+	// add to cart function
 	const addToCart = (event, product) => {
 		event.preventDefault();
 		// localStorage cart structure example

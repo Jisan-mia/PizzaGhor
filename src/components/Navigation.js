@@ -32,7 +32,9 @@ const Navigation = () => {
 					<li className="ml-6">
 						<Link to="/cart">
 							<div style={cartStyle}>
-								<span style={{ fontWeignt: "500" }}>{cart.totalItems}</span>
+								<span style={{ fontWeignt: "500" }}>
+									{cart.totalItems ? cart.totalItems : 0}
+								</span>
 								<img
 									style={{ height: 27, color: "white" }}
 									src="/images/cart2.png"
