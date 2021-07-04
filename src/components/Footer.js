@@ -29,9 +29,9 @@ const Footer = () => {
 					<h1 className="font-medium text-3xl">More Links</h1>
 					<ul>
 						<li>
-							<a href="#">Linkedin</a>
-							<a href="#">Github</a>
-							<a href="#">Twitter</a>
+							<a href="https://www.linkedin.com/in/jisan-mia/">Linkedin</a>
+							<a href="https://github.com/Jisan-mia">Github</a>
+							<a href="https://twitter.com/JisanMia4">Twitter</a>
 						</li>
 					</ul>
 				</div>
