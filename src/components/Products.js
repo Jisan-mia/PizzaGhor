@@ -27,8 +27,11 @@ const Products = () => {
 
 	return (
 		<div className="container mx-auto pb-20">
-			<h1 className="text-2xl font-bold my-8">Products </h1>
-			<div className="produucts-grid my-8 gap-24">
+			<h1 className="text-2xl font-bold my-8  text-center flex flex-col items-center juitify-center">
+				Products
+				<hr className="w-52 border-b-4 border-indigo-400 mt-2 rounded-full rounded" />
+			</h1>
+			<div className="produucts-grid my-8 mx-4">
 				{loading}
 				{products.length
 					? products.map((product) => (

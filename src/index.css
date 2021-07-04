@@ -1,3 +1,24 @@
+body {
+	/* margin: 0 20px; */
+}
+
+/* navigabtion section */
+
+/* Products */
+
+.produucts-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	grid-gap: 48px;
+	justify-content: center;
+	align-content: center;
+}
+.produucts-grid a {
+	justify-items: center;
+	align-items: center;
+	justify-self: center;
+}
+
 /* footer design */
 .footer-grid {
 	display: grid;
@@ -11,6 +32,7 @@
 	margin-bottom: 30px;
 }
 .footer-container {
+	margin: 0 !important;
 	background-color: #f3f9ff;
 	color: #756c8b;
 	padding-bottom: 0px;
@@ -35,7 +57,7 @@
 
 @media (max-width: 700px) {
 	.footer-grid {
-		margin: 0 20px;
+		padding: 0 25px;
 		display: grid;
 		grid-template-columns: 1fr;
 		gap: 0;
@@ -46,4 +68,7 @@
 	.footer-grid div h1 {
 		margin-bottom: 15px;
 	}
+}
+
+@media (max-width: 600px) {
 }

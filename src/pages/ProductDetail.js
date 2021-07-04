@@ -49,13 +49,13 @@ const ProductDetail = () => {
 	};
 
 	return (
-		<div className="container mx-auto my-12">
+		<div className="container mx-auto my-12 pt-8 pb-8 lg:w-1/2 w-full">
 			<button className="mb-12 font-bold " onClick={handleBackBtn}>
 				Back
 			</button>
 			<br />
 			{product.name ? (
-				<div className="flex items-center">
+				<div className="flex items-center ">
 					<img src={image} className="rounded-full" alt="detail-img" />
 
 					<div className="ml-12">

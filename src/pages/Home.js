@@ -4,9 +4,9 @@ import Products from "../components/Products";
 const Home = () => {
 	return (
 		<>
-			<div className="hero py-12">
-				<div className="container mx-auto flex items-center justify-between">
-					<div className="w-1/2 pl-0 md:pl-8">
+			<div className="hero py-12 px-4 md:px-0">
+				<div className="container mx-auto flex items-center justify-between flex-wrap-reverse md:text-left text-center">
+					<div className="w-full md:w-1/2 pl-0 md:pl-8 mt-3">
 						<h6 className="text-lg ">
 							<em>Are you hangry?</em>
 						</h6>
@@ -17,7 +17,7 @@ const Home = () => {
 							</button>
 						</Link>
 					</div>
-					<div className="w-1/2">
+					<div className="w-full md:w-1/2 hero-image ">
 						<img
 							className="w-4/5 m-auto"
 							src="/images/pizza1.png"

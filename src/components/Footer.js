@@ -6,10 +6,10 @@ const Footer = () => {
 			<footer className="footer-grid container mx-auto">
 				<div className="">
 					<h1 className="font-bold text-3xl  ">Pizza Ghor</h1>
-					<div className="text-justify font-normal">
+					<ul className=" font-normal">
 						PizzaGhor is a pizza e-commerce site where I commonly implemented
 						Reactjs, react-router, context API, functional components, hooks etc
-					</div>
+					</ul>
 				</div>
 				<div className="footer-links">
 					<h1 className="font-medium text-3xl ">Links</h1>
