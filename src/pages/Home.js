@@ -27,7 +27,7 @@ const Home = () => {
 				</div>
 			</div>
 
-			<div className="pb-24 ">
+			<div className="py-8 ">
 				<Products></Products>
 			</div>
 		</>

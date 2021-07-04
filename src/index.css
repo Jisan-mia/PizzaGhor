@@ -1,0 +1,49 @@
+/* footer design */
+.footer-grid {
+	display: grid;
+	grid-template-columns: 2fr 1fr 1fr;
+	gap: 48px;
+}
+.footer-grid div {
+	margin-top: 60px;
+}
+.footer-grid div h1 {
+	margin-bottom: 30px;
+}
+.footer-container {
+	background-color: #f3f9ff;
+	color: #756c8b;
+	padding-bottom: 0px;
+	background-image: linear-gradient(to right, #cddff7 0%, #cddff7 100%),
+		linear-gradient(to right, #d3cdf7 0%, #2f39d2 50%, #d3cdf7 100%);
+	background-size: 0% 4px, 100% 4px;
+	background-repeat: no-repeat;
+	backface-visibility: hidden;
+	padding-bottom: 25px;
+}
+
+.footer-links ul li a,
+.footer-more-links ul li a {
+	display: block;
+	font-size: 1.08rem;
+	margin-bottom: 15px;
+}
+.footer-links ul li a:hover,
+.footer-more-links ul li a:hover {
+	text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+	.footer-grid {
+		margin: 0 20px;
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 0;
+	}
+	.footer-grid div {
+		margin-top: 25px;
+	}
+	.footer-grid div h1 {
+		margin-bottom: 15px;
+	}
+}

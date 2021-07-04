@@ -26,9 +26,9 @@ const Products = () => {
 	const loading = isLoading && "loading";
 
 	return (
-		<div className="container mx-auto pb-24">
+		<div className="container mx-auto pb-20">
 			<h1 className="text-2xl font-bold my-8">Products </h1>
-			<div className="grid grid-cols-5 my-8 gap-24">
+			<div className="produucts-grid my-8 gap-24">
 				{loading}
 				{products.length
 					? products.map((product) => (
