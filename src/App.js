@@ -11,16 +11,15 @@ import ProductDetail from "./pages/ProductDetail";
 
 const App = () => {
 	const [cart, setCart] = useState({});
-	//fetch cart from localStorage
-	useEffect(() => {
-		const cart = window.localStorage.getItem("cart");
-
-		setCart(JSON.parse(cart));
-	}, []);
 
 	useEffect(() => {
 		window.localStorage.setItem("cart", JSON.stringify(cart));
 	}, [cart]);
+	//fetch cart from localStorage
+	useEffect(() => {
+		const cart = window.localStorage.getItem("cart");
+		setCart(JSON.parse(cart));
+	}, []);
 
 	return (
 		<>
