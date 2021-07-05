@@ -6,6 +6,13 @@ body {
 
 /* Products */
 
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 .produucts-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -32,6 +39,7 @@ body {
 	margin-bottom: 30px;
 }
 .footer-container {
+	font-size: 16px;
 	margin: 0 !important;
 	background-color: #f3f9ff;
 	color: #756c8b;
@@ -47,7 +55,7 @@ body {
 .footer-links ul li a,
 .footer-more-links ul li a {
 	display: block;
-	font-size: 1.08rem;
+	font-size: 1rem;
 	margin-bottom: 15px;
 }
 .footer-links ul li a:hover,
@@ -56,6 +64,13 @@ body {
 }
 
 @media (max-width: 700px) {
+	.footer-grid div h1 {
+		margin-bottom: 20px;
+		font-size: 1rem !important;
+	}
+	.footer-container {
+		font-size: 14px !important;
+	}
 	.footer-grid {
 		padding: 0 25px;
 		display: grid;
@@ -68,7 +83,65 @@ body {
 	.footer-grid div h1 {
 		margin-bottom: 15px;
 	}
+	#cart-item-cont {
+		display: grid;
+		grid-template-columns: repeat(6, minmax(40px, 1fr));
+		grid-template-rows: repeat(2, 1fr);
+		justify-content: center;
+
+		grid-template-areas:
+			"a b b d e e"
+			"a c c d e e";
+	}
+	#cart-item-cont .cart-item-img {
+		grid-row-start: 1;
+		grid-row-end: 2;
+		grid-area: a;
+	}
+	#cart-item-cont .cart-item-name {
+		grid-area: b;
+	}
+	#cart-item-cont .cart-items-plus-minus {
+		grid-area: c;
+		margin-left: 0.5rem;
+	}
+	#cart-item-cont .cart-item-price {
+		grid-area: d;
+	}
+	#cart-item-cont .cart-items-delete {
+		grid-area: e;
+	}
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+	#cart-item-cont {
+		grid-template-areas:
+			"a a b b d d"
+			"a a c c e e";
+	}
+
+	#cart-item-cont .cart-item-name {
+		grid-area: b;
+		font-size: 13px;
+	}
+	#cart-item-cont .cart-items-plus-minus {
+		font-size: 12px;
+	}
+	#cart-item-cont .cart-items-plus-minus button {
+		padding: 3px 10px;
+	}
+	#cart-item-cont .cart-item-price {
+		font-size: 13px;
+		align-items: end;
+		justify-items: end;
+		justify-self: end;
+	}
+	#cart-item-cont .cart-items-delete {
+		font-size: 12px !important;
+		padding: 3px 10px !important;
+
+		align-items: end;
+		justify-items: end;
+		justify-self: end;
+	}
 }

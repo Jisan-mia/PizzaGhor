@@ -11,13 +11,15 @@ const CartItem = ({
 	const { name, image, price, _id } = cartProduct;
 	return (
 		<li className="mb-6">
-			<div className="flex justify-between items-center">
-				<div className="flex items-center ">
-					<img src={image} alt="cart-pizza" className="rounded-full h-16" />
-					<h1 className="font-bold ml-2 w-40">{name}</h1>
-				</div>
+			<div className="flex justify-between items-center " id="cart-item-cont">
+				<img
+					src={image}
+					alt="cart-pizza"
+					className="rounded-full h-16 cart-item-img"
+				/>
+				<h1 className="font-bold ml-2 w-40 cart-item-name">{name}</h1>
 
-				<div className="flex items-center">
+				<div className="flex items-center cart-items-plus-minus">
 					<button
 						onClick={() => {
 							decrement(_id);
@@ -37,12 +39,14 @@ const CartItem = ({
 					</button>
 				</div>
 
-				<span className="font-bold">৳ {getPriceSum(_id, price)}</span>
+				<span className="font-bold cart-item-price">
+					৳ {getPriceSum(_id, price)}
+				</span>
 				<button
 					onClick={() => {
 						deleteCartItem(_id);
 					}}
-					className="py-1 px-4 rounded-full bg-red-600 text-white"
+					className="py-1 px-4 rounded-full bg-red-600 text-white cart-items-delete"
 				>
 					Delete
 				</button>

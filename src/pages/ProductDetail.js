@@ -49,16 +49,16 @@ const ProductDetail = () => {
 	};
 
 	return (
-		<div className="container mx-auto my-12 pt-8 pb-8 lg:w-1/2 w-full">
-			<button className="mb-12 font-bold " onClick={handleBackBtn}>
+		<div className="container mx-auto my-12 pt-8 pb-8  lg:w-1/2 w-full">
+			<button className="mb-12 md:px-0 px-8 font-bold " onClick={handleBackBtn}>
 				Back
 			</button>
 			<br />
 			{product.name ? (
-				<div className="flex items-center ">
-					<img src={image} className="rounded-full" alt="detail-img" />
+				<div className="flex items-center justify-center flex-wrap ">
+					<img src={image} className="rounded-full " alt="detail-img" />
 
-					<div className="ml-12">
+					<div className="md:ml-12 mt-2 md:text-left text-center">
 						<h1 className="text-2xl font-bold">{name}</h1>
 						<h1 className=" text-md">{size}</h1>
 						<h1 className="font-bold mt-3">৳ {price}</h1>

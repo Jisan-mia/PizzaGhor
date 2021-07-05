@@ -93,7 +93,7 @@ const Cart = () => {
 		setCart({});
 	};
 	return (
-		<div className="container mx-auto pt-8 pb-24 lg:w-1/2 w-full">
+		<div className="container mx-auto pt-8 pb-24 md:px-0 px-6 lg:w-1/2 w-full">
 			<h1 className="font-bold mb-8">Cart Items</h1>
 
 			<ul>
