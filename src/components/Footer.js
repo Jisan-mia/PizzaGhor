@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CopyWrite from "./CopyWrite";
 const Footer = () => {
 	return (
-		<div className="footer-container ">
+		<div className="footer-container mt-auto">
 			<footer className="footer-grid container mx-auto">
 				<div className="">
 					<h1 className="font-bold text-3xl  ">Pizza Ghor</h1>
@@ -36,6 +37,7 @@ const Footer = () => {
 					</ul>
 				</div>
 			</footer>
+			<CopyWrite />
 		</div>
 	);
 };

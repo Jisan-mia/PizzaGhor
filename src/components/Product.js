@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../CartContext";
 
-const Product = ({ product }) => {
+const Product = ({ product, products }) => {
 	const [isAdding, setIsAdding] = useState(false);
 	const { name, price, size, image, _id } = product;
 	const { cart, setCart } = useContext(CartContext);

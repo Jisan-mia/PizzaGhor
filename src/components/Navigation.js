@@ -35,6 +35,9 @@ const Navigation = () => {
 							<Link to="/products">Products</Link>
 						</li>
 						<li className="ml-6">
+							<Link to="/signin">Sign In</Link>
+						</li>
+						<li className="ml-6">
 							<Link to="/cart">
 								<div style={cartStyle}>
 									<span style={{ fontWeignt: "500" }}>

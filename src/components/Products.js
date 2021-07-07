@@ -12,14 +12,23 @@ const Products = () => {
 	}, []);
 
 	const fetchProducts = async () => {
-		try {
-			const products = await axios.get(
-				"https://ecom-rest-apis.herokuapp.com/api/products"
-			);
-			setProducts(products.data);
+		let products = localStorage.getItem("products");
+
+		if (products) {
+			products = JSON.parse(products);
+			setProducts(products);
 			setIsLoading(false);
-		} catch (error) {
-			console.log(error);
+		} else {
+			try {
+				const products = await axios.get(
+					"https://ecom-rest-apis.herokuapp.com/api/products"
+				);
+				setProducts(products.data);
+				setIsLoading(false);
+				localStorage.setItem("products", JSON.stringify(products.data));
+			} catch (error) {
+				console.log(error);
+			}
 		}
 	};
 
@@ -27,7 +36,7 @@ const Products = () => {
 
 	return (
 		<div className="container mx-auto pb-20">
-			<h1 className="text-2xl font-bold my-8  text-center flex flex-col items-center juitify-center">
+			<h1 className="text-2xl font-bold my-8  text-center flex flex-col items-center justify-center">
 				Products
 				<hr className="w-52 border-b-4 border-indigo-400 mt-2 rounded-full rounded" />
 			</h1>
