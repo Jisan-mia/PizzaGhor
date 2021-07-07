@@ -17,7 +17,7 @@ a {
 }
 .produucts-grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(143px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	grid-gap: 48px;
 	justify-content: center;
 	align-content: center;
@@ -66,6 +66,9 @@ a {
 }
 
 @media (max-width: 700px) {
+	.produucts-grid {
+		grid-template-columns: repeat(auto-fit, minmax(143px, 1fr));
+	}
 	.footer-grid div h1 {
 		margin-bottom: 20px;
 		font-size: 1rem !important;
